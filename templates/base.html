@@ -1,0 +1,221 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="nevigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Flasky</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1 span style="margin-left: 80%;"> TIME: {{date_time}}</h1>
+        </style>
+        <br><br>
+        <style>
+         table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-left: 60%;
+            
+        }
+        </style>
+        <table style="position: fixed;">
+            <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            </tr>
+            <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            </tr>
+            <tr>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            </tr>
+            <tr>
+            <td>31</td>
+            <td>32</td>
+            <td>33</td>
+            <td>34</td>
+            <td>35</td>
+            <td>36</td>
+            <td>37</td>
+            <td>38</td>
+            <td>39</td>
+            <td>40</td>
+            </tr>
+            <tr>
+            <td>41</td>
+            <td>42</td>
+            <td>43</td>
+            <td>44</td>
+            <td>45</td>
+            <td>46</td>
+            <td>47</td>
+            <td>48</td>
+            <td>49</td>
+            <td>50</td>
+            </tr>
+            </table>
+        <h1><div id="timer"></div> </h1>
+        <script>
+
+            var seconds = 60;
+            function countdown() {
+                seconds--;
+                var minutes = Math.floor(seconds / 60);
+                var remainingSeconds = seconds % 60;
+                if (remainingSeconds < 10) {
+                    remainingSeconds = "0" + remainingSeconds;
+                }
+                document.getElementById("timer").innerHTML = minutes + ":" + remainingSeconds;
+                if (seconds == 0) {
+                    clearInterval(countdownTimer);
+                    alert("Time's up!")
+                }
+            }
+            var countdownTimer = setInterval(countdown, 1000);
+        </script>
+
+        <h1> INSTRUCTION:</h1>
+    </div>
+    <div class="page_content">
+        <h3> Who is the president of Egypt?<br>
+            john:
+            <input type="radio" name="johnormosesorpeterormatthew" value="">
+            <br> 
+            moses:
+            <input type="radio" name="johnormosesorpeterormatthew" value="">
+            <br>
+            peter:
+            <input type="radio" name="johnormosesorpeterormatthew" value="">
+            <br>
+            matthew:
+            <input type="radio" name="johnormosesorpeterormatthew" value="">
+        </h3><br>
+        <h3>What is the purest form of carbon?<br>
+            coal:
+            <input type="radio" name="coalordiamondorgraphiteorcoke" value="">
+            <br>
+            diamond:
+            <input type="radio" name="coalordiamondorgraphiteorcoke" value="">
+            <br>
+            graphite:
+            <input type="radio" name="coalordiamondorgraphiteorcoke" value="">
+            <br>
+            coke:
+            <input type="radio" name="coalordiamondorgraphiteorcoke" value="">
+        </h3><br>
+        <h3> Whice element has atomic number of TEN?<br>
+            neon:
+            <input type="radio" name="neonorargonoroxygenorsodium" value="">
+            <br>
+            argon:
+            <input type="radio" name="neonorargonoroxygenorsodium" value="">
+            <br>
+            oxygen:
+            <input type="radio" name="neonorargonoroxygenorsodium" value="">
+            <br>
+            sodium:
+            <input type="radio" name="neonorargonoroxygenorsodium" value="">
+        </h3><br>
+        <h3>Action and reaction are equal and opposite which law of motion is that?<br>
+            firstlaw:
+            <input type="radio" name="firstlaworsecondlaworthirdlaworlawofgravity" value="">
+            <br>
+            secondlaw:
+            <input type="radio" name="firstlaworsecondlaworthirdlaworlawofgravity" value="">
+            <br>
+            thirdlaw:
+            <input type="radio" name="firstlaworsecondlaworthirdlaworlawofgravity" value="">
+            <br>
+            lawofgravity:
+            <input type="radio" name="firstlaworsecondlaworthirdlaworlawofgravity" value="">
+        </h3><br>
+        <h3>The product of force and distanc is?<br>
+            watt:
+            <input type="radio" name="wattornewtonprvoltorjoule" value="">
+            <br>
+            newton:
+            <input type="radio" name="wattornewtonprvoltorjoule" value="">
+            <br>
+            volt:
+            <input type="radio" name="wattornewtonprvoltorjoule" value="">
+            <br>
+            joule:
+            <input type="radio" name="wattornewtonprvoltorjoule" value="">
+        </h3><br>
+        <h3>The ability of  substance to change from solid to liquid is?<br>
+            condensation:
+            <input type="radio" name="condensationorvapororconvectionormelting" value="">
+            <br>
+            vapor:
+            <input type="radio" name="condensationorvapororconvectionormelting" value="">
+            <br>
+            convection:
+            <input type="radio" name="condensationorvapororconvectionormelting" value="">
+            <br>
+            melting:
+            <input type="radio" name="condensationorvapororconvectionormelting" value="">
+        </h3><br>
+        <h3>The ability of  substance to conduct electricity is?<br>
+            condensation:
+            <input type="radio" name="condensationorvapororconvectionorconductor" value="">
+            <br>
+            vapor:
+            <input type="radio" name="condensationorvapororconvectionormconductor" value="">
+            <br>
+            convection:
+            <input type="radio" name="condensationorvapororconvectionorconductor" value="">
+            <br>
+            conductor:
+            <input type="radio" name="condensationorvapororconvectionorconductor" value="">
+        </h3><br>
+
+    </div>
+</div>
+{% endblock %}
