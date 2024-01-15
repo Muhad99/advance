@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="login">
+        <h1>LOGIN</h1>
+        <div class="links">
+            <a href="/log" class="active">Login</a>
+            <a href="/reg">Register</a>
+        </div>
+        <form action="{{ url_for('log') }}" method="post" autocomplete="off">
+            <label for="username">
+                <i class="fa fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password">
+                <i class="fa fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Login">
+        </form>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
